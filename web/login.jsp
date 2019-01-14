@@ -44,15 +44,15 @@
 						  <div class="tab-pane active" id="pic-1"><img src="./assets/images/cig1.jpg" /></div>
 						  <div class="tab-pane" id="pic-2"><img src="./assets/images/cig2.jpg" /></div>
 						  <div class="tab-pane" id="pic-3"><img src="./assets/images/cig3.JPG" /></div>
-						  <div class="tab-pane" id="pic-4"><img src="./assets/images/cig1.jpg" /></div>
-						  <div class="tab-pane" id="pic-5"><img src="./assets/images/cig1.jpg" /></div>
+						  <div class="tab-pane" id="pic-4"><img src="./assets/images/cig4.jpg" /></div>
+						  <div class="tab-pane" id="pic-5"><img src="./assets/images/cig5.jpg" /></div>
 						</div>
 						<ul class="preview-thumbnail nav nav-tabs">
 						  <li class="active"><a data-target="#pic-1" data-toggle="tab"><img src="./assets/images/cig1.jpg" /></a></li>
 						  <li><a data-target="#pic-2" data-toggle="tab"><img src="./assets/images/cig2.jpg" /></a></li>
 						  <li><a data-target="#pic-3" data-toggle="tab"><img src="./assets/images/cig3.JPG" /></a></li>
-						  <li><a data-target="#pic-4" data-toggle="tab"><img src="./assets/images/cig1.jpg" /></a></li>
-						  <li><a data-target="#pic-5" data-toggle="tab"><img src="./assets/images/cig1.jpg" /></a></li>
+						  <li><a data-target="#pic-4" data-toggle="tab"><img src="./assets/images/cig4.jpg" /></a></li>
+						  <li><a data-target="#pic-5" data-toggle="tab"><img src="./assets/images/cig5.jpg" /></a></li>
 						</ul>
 						
 					</div>

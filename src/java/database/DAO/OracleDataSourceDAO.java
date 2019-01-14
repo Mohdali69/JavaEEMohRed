@@ -5,20 +5,20 @@
  */
 package database.DAO;
 
+import com.mysql.jdbc.jdbc2.optional.MysqlDataSource;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.sql.SQLException;
 import java.util.Properties;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import oracle.jdbc.pool.OracleDataSource; 
 
 
 /**
  *
  * @author Mohamed
  */
-public class OracleDataSourceDAO extends OracleDataSource {
+public class OracleDataSourceDAO extends MysqlDataSource {
     
     public static OracleDataSourceDAO ods;
     
@@ -33,12 +33,12 @@ public class OracleDataSourceDAO extends OracleDataSource {
        Properties props = new Properties();
 
             ods = new OracleDataSourceDAO();
-            ods.setDriverType("thin");
-            ods.setPortNumber(1521);
-            ods.setServiceName("orcl.univ-lyon1.fr");
+            
+            ods.setPortNumber(3306);
+            
             ods.setUser("p1700102");
             ods.setPassword("294150");
-            ods.setServerName("iutdoua-oracle.univ-lyon1.fr");
+            ods.setServerName("iutdoua-web.univ-lyon1.fr");
   
         }catch (Exception ex) {
             Logger.getLogger(OracleDataSourceDAO.class.getName()).log(Level.SEVERE, null, ex);

@@ -45,6 +45,7 @@ public class loginAction extends Action{
                     if(us.getPassword().equals(pass)){
                         
                         request.getSession().setAttribute("log", true);
+                        return ("login.jsp");
                     }
                 }
             }} catch (SQLException ex) {
@@ -52,7 +53,7 @@ public class loginAction extends Action{
         } catch (FileNotFoundException ex) {
             Logger.getLogger(loginAction.class.getName()).log(Level.SEVERE, null, ex);
         }
-        
+        request.getSession().setAttribute("log", false);
         return ("login.jsp");
     }
     

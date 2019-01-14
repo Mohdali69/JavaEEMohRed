@@ -35,9 +35,7 @@
                                 <a class="dropdown-item" href="#">Deconnexion</a>
                             </div>
                         </li>
-                        
-                    </ul>
-                    <span><% 
+                        <li class="nav-item"> <a href="#" class="nav-link"><% 
            Utilisateur us =(Utilisateur) session.getAttribute("currentUser");
            if((Boolean)session.getAttribute("log")==true){
                out.println("Bienvenue "+us.getUser());
@@ -46,7 +44,9 @@
                out.println("ERROR : WRONG IDS");
            }
            
-%></span>
+%></a></li>
+                    </ul>
+                    
                     
                 </div>
             </nav>

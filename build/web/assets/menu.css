@@ -15,14 +15,14 @@ and open the template in the editor.
     background-image: linear-gradient(to top, #8D9695 0%, #D08E92 99%, #E1D2D3 100%);
 }
 .darken-grey-text {
-    color: #2E2E2E;
+    color: black;
 }
 
 .navbar .dropdown-menu a:hover {
-    color: #616161 !important;
+    color: black !important;
 }
 .darken-grey-text {
-    color: #2E2E2E;
+    color: black;
 }
 
 nav{

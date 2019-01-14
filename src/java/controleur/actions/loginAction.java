@@ -43,7 +43,7 @@ public class loginAction extends Action{
             for(Utilisateur us : liste){
                 if(us.getUser().equals(user)){
                     if(us.getPassword().equals(pass)){
-                        
+                        System.out.println("OK");
                         request.getSession().setAttribute("log", true);
                         return ("login.jsp");
                     }
@@ -54,7 +54,7 @@ public class loginAction extends Action{
             Logger.getLogger(loginAction.class.getName()).log(Level.SEVERE, null, ex);
         }
         request.getSession().setAttribute("log", false);
-        return ("login.jsp");
+        return ("index.html");
     }
     
 }

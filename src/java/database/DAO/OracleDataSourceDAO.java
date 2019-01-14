@@ -38,6 +38,7 @@ public class OracleDataSourceDAO extends MysqlDataSource {
             
             ods.setUser("p1700102");
             ods.setPassword("294150");
+            ods.setDatabaseName("p1700102");
             ods.setServerName("iutdoua-web.univ-lyon1.fr");
   
         }catch (Exception ex) {

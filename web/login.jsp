@@ -28,7 +28,7 @@
         <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
     </head>
-    <body id="LoginForm" class="hm-gradient">
+    <body id="LoginForm" >
 
 
 <%@include  file="./menu.jsp" %>
@@ -41,23 +41,23 @@
 					<div class="preview col-md-6">
 						
 						<div class="preview-pic tab-content">
-						  <div class="tab-pane active" id="pic-1"><img src="http://placekitten.com/400/252" /></div>
-						  <div class="tab-pane" id="pic-2"><img src="http://placekitten.com/400/252" /></div>
-						  <div class="tab-pane" id="pic-3"><img src="http://placekitten.com/400/252" /></div>
-						  <div class="tab-pane" id="pic-4"><img src="http://placekitten.com/400/252" /></div>
-						  <div class="tab-pane" id="pic-5"><img src="http://placekitten.com/400/252" /></div>
+						  <div class="tab-pane active" id="pic-1"><img src="./assets/images/cig1.jpg" /></div>
+						  <div class="tab-pane" id="pic-2"><img src="./assets/images/cig2.jpg" /></div>
+						  <div class="tab-pane" id="pic-3"><img src="./assets/images/cig3.JPG" /></div>
+						  <div class="tab-pane" id="pic-4"><img src="./assets/images/cig1.jpg" /></div>
+						  <div class="tab-pane" id="pic-5"><img src="./assets/images/cig1.jpg" /></div>
 						</div>
 						<ul class="preview-thumbnail nav nav-tabs">
-						  <li class="active"><a data-target="#pic-1" data-toggle="tab"><img src="http://placekitten.com/200/126" /></a></li>
-						  <li><a data-target="#pic-2" data-toggle="tab"><img src="http://placekitten.com/200/126" /></a></li>
-						  <li><a data-target="#pic-3" data-toggle="tab"><img src="http://placekitten.com/200/126" /></a></li>
-						  <li><a data-target="#pic-4" data-toggle="tab"><img src="http://placekitten.com/200/126" /></a></li>
-						  <li><a data-target="#pic-5" data-toggle="tab"><img src="http://placekitten.com/200/126" /></a></li>
+						  <li class="active"><a data-target="#pic-1" data-toggle="tab"><img src="./assets/images/cig1.jpg" /></a></li>
+						  <li><a data-target="#pic-2" data-toggle="tab"><img src="./assets/images/cig2.jpg" /></a></li>
+						  <li><a data-target="#pic-3" data-toggle="tab"><img src="./assets/images/cig3.JPG" /></a></li>
+						  <li><a data-target="#pic-4" data-toggle="tab"><img src="./assets/images/cig1.jpg" /></a></li>
+						  <li><a data-target="#pic-5" data-toggle="tab"><img src="./assets/images/cig1.jpg" /></a></li>
 						</ul>
 						
 					</div>
 					<div class="details col-md-6">
-						<h3 class="product-title">men's shoes fashion</h3>
+						<h3 class="product-title">Choisissez vos ingrédients ! </h3>
 						<div class="rating">
 							<div class="stars">
 								<span class="fa fa-star checked"></span>
@@ -68,22 +68,22 @@
 							</div>
 							<span class="review-no">41 reviews</span>
 						</div>
-						<p class="product-description">Suspendisse quos? Tempus cras iure temporibus? Eu laudantium cubilia sem sem! Repudiandae et! Massa senectus enim minim sociosqu delectus posuere.</p>
-						<h4 class="price">current price: <span>$180</span></h4>
-						<p class="vote"><strong>91%</strong> of buyers enjoyed this product! <strong>(87 votes)</strong></p>
-						<h5 class="sizes">sizes:
-							<span class="size" data-toggle="tooltip" title="small">s</span>
-							<span class="size" data-toggle="tooltip" title="medium">m</span>
-							<span class="size" data-toggle="tooltip" title="large">l</span>
-							<span class="size" data-toggle="tooltip" title="xtra large">xl</span>
+						<p class="product-description">Sur Tige-Time, la meilleure qualité et la plus grande diversité de Tiges du web !</p>
+						<h4 class="price">Prix actuel : <span>12 euros</span></h4>
+						<p class="vote"><strong>91%</strong> des consomatteurs ont aimés ce produit. <strong>(87 votes)</strong></p>
+						<h5 class="sizes">Dose de nicotine :
+							<span class="size" data-toggle="tooltip" title="small">10%</span>
+							<span class="size" data-toggle="tooltip" title="medium">20%</span>
+							<span class="size" data-toggle="tooltip" title="large">40%</span>
+							<span class="size" data-toggle="tooltip" title="xtra large">70%</span>
 						</h5>
-						<h5 class="colors">colors:
-							<span class="color orange not-available" data-toggle="tooltip" title="Not In store"></span>
+						<h5 class="colors">Couleur du paquet
+							<span class="color orange" data-toggle="tooltip" title="Not In store"></span>
 							<span class="color green"></span>
 							<span class="color blue"></span>
 						</h5>
 						<div class="action">
-							<button class="add-to-cart btn btn-default" type="button">add to cart</button>
+							<button class="add-to-cart btn btn-dark" type="button">Ajouter au panier</button>
 							<button class="like btn btn-default" type="button"><span class="fa fa-heart"></span></button>
 						</div>
 					</div>

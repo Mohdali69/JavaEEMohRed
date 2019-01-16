@@ -87,7 +87,7 @@
 							<span class="color blue"></span>
 						</h5>
 						<div class="action">
-							<button class="add-to-cart btn btn-dark" type="button">Ajouter au panier</button>
+                                                    <button class="add-to-cart btn btn-dark" type="button"><a href="actionServlet?todo=creation">Ajouter au panier</a></button>
 							<button class="like btn btn-default" type="button"><span class="fa fa-heart"></span></button>
 						</div>
 					</div>

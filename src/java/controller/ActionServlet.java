@@ -6,6 +6,7 @@
 package controller;
 
 import controleur.actions.Action;
+import controleur.actions.creationAction;
 import controleur.actions.loginAction;
 import database.DAO.OracleDataSourceDAO;
 import database.DAO.OracleUtilisateurDAO;
@@ -49,9 +50,21 @@ public class ActionServlet extends HttpServlet {
         
         switch (todo){
             case "login" : 
-               
+                
                 action = new loginAction();
-                vue = action.execute(request);        
+                vue = action.execute(request); 
+                break;
+                
+            case "accueil" :
+                
+                vue = "login.jsp";
+                break;
+            
+            case "creation" : 
+                
+                action = new creationAction();
+                vue = action.execute(request);
+                break;
         }
         
         rd = request.getRequestDispatcher(vue);

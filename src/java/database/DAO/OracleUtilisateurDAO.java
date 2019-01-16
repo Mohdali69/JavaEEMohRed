@@ -27,7 +27,7 @@ import metier.Utilisateur;
  */
 public class OracleUtilisateurDAO implements IUtilisateurDAO{
     private static DataSource ds; 
-    private static Connection connexionBD;
+    static Connection connexionBD;
     
     @Override
     public void setDataSource(DataSource ds){

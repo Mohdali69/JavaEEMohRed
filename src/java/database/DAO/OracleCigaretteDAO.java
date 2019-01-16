@@ -7,6 +7,7 @@ package database.DAO;
 
 import database.Ipackage.ICigaretteDAO;
 import java.sql.Connection;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -23,7 +24,7 @@ import metier.Cigarette;
  */
 public class OracleCigaretteDAO implements ICigaretteDAO {
     private static DataSource ds; 
-    private static Connection connexionBD;
+    static Connection connexionBD;
     
     @Override
     public void setDataSource(DataSource ds){
@@ -58,5 +59,38 @@ public class OracleCigaretteDAO implements ICigaretteDAO {
         
         
         
+    }
+    @Override
+    public void supprimerCigarette(Cigarette Cigarette) {
+         PreparedStatement state = null;
+        try{
+            state=OracleCigaretteDAO.connexionBD.prepareStatement("DELETE FROM Cigarette WHERE id = ?");
+            state.setInt(1,Cigarette.getId());
+            state.execute();
+            state.close();
+        }catch(SQLException ex){
+           Logger.getLogger(OracleCigaretteDAO.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+    @Override
+    public void creerCigarette(Cigarette Cigarette) {
+        PreparedStatement state = null;
+        try{
+            state=OracleCigaretteDAO.connexionBD.prepareStatement("INSERT INTO Cigarette (nom,id,ingredient1,prix,ingredient2,ingredient3,ingredient4,ingredient5,ingredient6,commentaire) VALUES (?,?,?,?,?,?,?,?,?,?)");
+            state.setString(1,Cigarette.getNom());
+            state.setInt(2,Cigarette.getId());
+            state.setInt(3,Cigarette.getIngredient1());
+            state.setInt(4, Cigarette.getPrix());
+            state.setInt(5,Cigarette.getIngredient2());
+            state.setInt(6,Cigarette.getIngredient3());
+            state.setInt(7,Cigarette.getIngredient4());
+            state.setInt(8,Cigarette.getIngredient5());
+            state.setInt(9,Cigarette.getIngredient6());
+            state.setString(10,Cigarette.getCommentaire());
+            state.execute();
+            state.close();
+        }catch(SQLException ex){
+           Logger.getLogger(OracleCigaretteDAO.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }    
 }

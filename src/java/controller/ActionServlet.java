@@ -6,6 +6,7 @@
 package controller;
 
 import controleur.actions.Action;
+import controleur.actions.ajoutAction;
 import controleur.actions.classiqueAction;
 import controleur.actions.creationAction;
 import controleur.actions.loginAction;
@@ -72,6 +73,11 @@ public class ActionServlet extends HttpServlet {
                 action = new classiqueAction();
                 vue = action.execute(request); 
                 break;
+            case "ajout" : 
+                
+                action = new ajoutAction();
+                vue = action.execute(request); 
+                break;   
         }
         
         rd = request.getRequestDispatcher(vue);

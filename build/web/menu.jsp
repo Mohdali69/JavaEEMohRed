@@ -8,14 +8,14 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <div class="container">
             <nav class="navbar navbar-expand-lg   mb-4">
-                <a class="navbar-brand" href="#">Tige-Time</a>
+                <a class="navbar-brand" href="actionServlet?todo=accueil">Tige-Time</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav mr-auto">
                         <li class="nav-item active">
-                            <a class="nav-link" href="#">Accueil <span class="sr-only"></span></a>
+                            <a class="nav-link" href="actionServlet?todo=accueil">Accueil <span class="sr-only"></span></a>
                         </li>
                         
                         <li class="nav-item">
@@ -23,7 +23,7 @@
                         </li>
                         
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Mon Comtpte</a>
+                            <a class="nav-link" href="#">Mon Compte</a>
                         </li>
                         
                         <li class="nav-item dropdown">

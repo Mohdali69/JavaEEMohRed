@@ -6,6 +6,7 @@
 package controller;
 
 import controleur.actions.Action;
+import controleur.actions.classiqueAction;
 import controleur.actions.creationAction;
 import controleur.actions.loginAction;
 import database.DAO.OracleDataSourceDAO;
@@ -64,6 +65,11 @@ public class ActionServlet extends HttpServlet {
                 
                 action = new creationAction();
                 vue = action.execute(request);
+                break;
+            case "classique" : 
+                
+                action = new classiqueAction();
+                vue = action.execute(request); 
                 break;
         }
         

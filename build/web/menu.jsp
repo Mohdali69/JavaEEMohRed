@@ -19,7 +19,7 @@
                         </li>
                         
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Les Classiques</a>
+                            <a class="nav-link" href="actionServlet?todo=classique">Les Classiques</a>
                         </li>
                         
                         <li class="nav-item">

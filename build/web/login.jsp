@@ -38,6 +38,7 @@
 
    <img src="./assets/images/pubKhapta.gif" class="pubG"/>
    <img src="./assets/images/pub2.gif" class="pubD"/>
+   <%! int id = 0;%>
    <div class="container">
 		<div class="card">
 			<div class="container-fliud">
@@ -52,7 +53,7 @@
 						  <div class="tab-pane" id="pic-5"><img src="./assets/images/cig5.jpg" /></div>
 						</div>
 						<ul class="preview-thumbnail nav nav-tabs">
-						  <li class="active"><a data-target="#pic-1" data-toggle="tab"><img src="./assets/images/cig1.jpg" /></a></li>
+						  <li class="active" ><a data-target="#pic-1" data-toggle="tab" ><img src="./assets/images/cig1.jpg" /></a></li>
 						  <li><a data-target="#pic-2" data-toggle="tab"><img src="./assets/images/cig2.jpg" /></a></li>
 						  <li><a data-target="#pic-3" data-toggle="tab"><img src="./assets/images/cig3.JPG" /></a></li>
 						  <li><a data-target="#pic-4" data-toggle="tab"><img src="./assets/images/cig4.jpg" /></a></li>
@@ -60,7 +61,7 @@
 						</ul>
 						
 					</div>
-					<div class="details col-md-6">
+					<div class="details col-md-6" >
 						<h3 class="product-title">Choisissez vos ingrédients ! </h3>
 						<div class="rating">
 							<div class="stars">
@@ -89,10 +90,11 @@
                                                 
 
 						<div class="action">
-                                                    <button class="add-to-cart btn btn-dark" type="button"><a href="actionServlet?todo=creation">Ajouter au panier</a></button>
+                                                    <button class="add-to-cart btn btn-dark" type="button"><a href="actionServlet?todo=creation&choix=<%=id%>">Ajouter au panier</a></button>
 							<button class="like btn btn-default" type="button"><span class="fa fa-heart"></span></button>
 						</div>
 					</div>
+                                    
 				</div>
 			</div>
 		</div>

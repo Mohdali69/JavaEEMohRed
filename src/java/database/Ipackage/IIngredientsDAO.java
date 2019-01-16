@@ -13,7 +13,7 @@ import metier.Ingredients;
  *
  * @author Asus
  */
-public interface IIngredients {
+public interface IIngredientsDAO {
     
     public void setConnection(Connection c);
     

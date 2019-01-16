@@ -45,30 +45,85 @@
    <div class="container">
     <%! List<Ingredients> Lingre = new ArrayList();
     %>
-       <form>
+       <form method="POST" action="actionServlet?todo=ajout">
   <div class="form-group">
     <label for="exampleFormControlInput1">Nom de la Tige</label>
     <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Une Tige" name="nom">
   </div>
     <div class="form-group">
     <label for="exampleFormControlSelect2">Ingredient n°1</label>
-    <select multiple class="form-control" id="exampleFormControlSelect2" name="ingredient1">
+    <select  class="form-control" id="exampleFormControlSelect2" name="ingredient1">
+               <option value="150">Rien</option>
         <%  
           Lingre = (ArrayList) session.getAttribute("Liste");
            for(int j=0;j<Lingre.size();j++){
-             out.println("<option>"+Lingre.get(j).getNom()+"</option>");
+             out.println("<option value="+Lingre.get(j).getId()+">"+Lingre.get(j).getNom()+"</option>");
+            }
+                            
+       %>
+
+    </select>
+  </div>
+    <div class="form-group">
+    <label for="exampleFormControlSelect2">Ingredient n°2</label>
+    <select class="form-control" id="exampleFormControlSelect2" name="ingredient2">
+               <option value="150">Rien</option>
+        <%  
+          Lingre = (ArrayList) session.getAttribute("Liste");
+           for(int j=0;j<Lingre.size();j++){
+             out.println("<option value="+Lingre.get(j).getId()+">"+Lingre.get(j).getNom()+"</option>");
             }
                             
        %>
     </select>
   </div>
     <div class="form-group">
-    <label for="exampleFormControlSelect2">Ingredient n°2</label>
-    <select multiple class="form-control" id="exampleFormControlSelect2" name="ingredient2">
+    <label for="exampleFormControlSelect2">Ingredient n°3</label>
+    <select class="form-control" id="exampleFormControlSelect2" name="ingredient3">
+               <option value="150">Rien</option>
         <%  
           Lingre = (ArrayList) session.getAttribute("Liste");
            for(int j=0;j<Lingre.size();j++){
-             out.println("<option>"+Lingre.get(j).getNom()+"</option>");
+             out.println("<option value="+Lingre.get(j).getId()+">"+Lingre.get(j).getNom()+"</option>");
+            }
+                            
+       %>
+    </select>
+  </div>
+    <div class="form-group">
+    <label for="exampleFormControlSelect2">Ingredient n°4</label>
+    <select class="form-control" id="exampleFormControlSelect2" name="ingredient4">
+               <option value="150">Rien</option>
+        <%  
+          Lingre = (ArrayList) session.getAttribute("Liste");
+           for(int j=0;j<Lingre.size();j++){
+             out.println("<option value="+Lingre.get(j).getId()+">"+Lingre.get(j).getNom()+"</option>");
+            }
+                            
+       %>
+    </select>
+  </div>
+    <div class="form-group">
+    <label for="exampleFormControlSelect2">Ingredient n°5</label>
+    <select class="form-control" id="exampleFormControlSelect2" name="ingredient5">
+               <option value="150">Rien</option>
+        <%  
+          Lingre = (ArrayList) session.getAttribute("Liste");
+           for(int j=0;j<Lingre.size();j++){
+             out.println("<option value="+Lingre.get(j).getId()+">"+Lingre.get(j).getNom()+"</option>");
+            }
+                            
+       %>
+    </select>
+  </div>
+    <div class="form-group">
+    <label for="exampleFormControlSelect2">Ingredient n°6</label>
+    <select class="form-control" id="exampleFormControlSelect2" name="ingredient6">
+               <option value="150">Rien</option>
+        <%  
+          Lingre = (ArrayList) session.getAttribute("Liste");
+           for(int j=0;j<Lingre.size();j++){
+             out.println("<option value="+Lingre.get(j).getId()+">"+Lingre.get(j).getNom()+"</option>");
             }
                             
        %>
@@ -78,6 +133,7 @@
     <label for="exampleFormControlTextarea1">Commentaire</label>
     <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="commentaire"></textarea>
   </div>
+    <input type="submit" class="btn btn-dark" name="valider">Valider</button>
 </form>
             
        

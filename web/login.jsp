@@ -11,7 +11,7 @@
 <%@page import="metier.Utilisateur"%>
 
 <!DOCTYPE html>
-<html>
+<html id="LoginForm">
     <head>
         <title>Accueil</title>
         <meta charset="UTF-8">
@@ -28,12 +28,13 @@
         <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
     </head>
-    <body id="LoginForm" >
+    <body  >
 
 
 <%@include  file="./menu.jsp" %>
 
-   
+   <img src="./assets/images/pubKhapta.gif" class="pubG"/>
+   <img src="./assets/images/pub2.gif" class="pubD"/>
    <div class="container">
 		<div class="card">
 			<div class="container-fliud">
@@ -90,6 +91,7 @@
 				</div>
 			</div>
 		</div>
+       
 	</div>
    
     

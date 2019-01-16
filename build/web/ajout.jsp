@@ -43,7 +43,7 @@
    <img src="./assets/images/pubKhapta.gif" class="pubG"/>
    <img src="./assets/images/pub2.gif" class="pubD"/>
    <div class="container">
-       <% if(session.getAttribute("erreur")!=""){
+       <% if(!session.getAttribute("erreur").equals("") || session.getAttribute("erreur")!=null){
            out.println("<div class='alert alert-danger' role='alert'>"+session.getAttribute("erreur")+"</div>");
            }
        else{

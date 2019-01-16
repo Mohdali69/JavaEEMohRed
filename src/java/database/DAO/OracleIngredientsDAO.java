@@ -28,7 +28,7 @@ import database.Ipackage.IIngredientsDAO;
  */
 public class OracleIngredientsDAO implements IIngredientsDAO {
     private static DataSource ds; 
-    private static Connection connexionBD;
+    static Connection connexionBD;
     
     @Override
     public void setDataSource(DataSource ds){
@@ -63,5 +63,30 @@ public class OracleIngredientsDAO implements IIngredientsDAO {
         
         
         
-    }    
+    }
+    @Override
+    public void supprimerIngredients(Ingredients Ingredients){
+    PreparedStatement state = null;
+        try{
+            state=OracleIngredientsDAO.connexionBD.prepareStatement("DELETE FROM Ingredients WHERE id = ?");
+            state.setInt(1,Ingredients.getId());
+            state.execute();
+            state.close();
+        }catch(SQLException ex){
+           Logger.getLogger(OracleIngredientsDAO.class.getName()).log(Level.SEVERE, null, ex);
+        }     
+    }
+    @Override
+    public void creerIngredients(Ingredients Ingredients){
+         PreparedStatement state = null;
+        try{
+            state=OracleIngredientsDAO.connexionBD.prepareStatement("INSERT INTO Ingredients (nom,id) VALUES (?,?)");
+            state.setString(1,Ingredients.getNom());
+            state.setInt(2, Ingredients.getId());
+            state.execute();
+            state.close();
+        }catch(SQLException ex){
+           Logger.getLogger(OracleIngredientsDAO.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
 }

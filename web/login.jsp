@@ -87,8 +87,6 @@
 							<span class="color green"></span>
 							<span class="color blue"></span>
 						</h5>
-                                                
-
 						<div class="action">
                                                     <button class="add-to-cart btn btn-dark" type="button"><a href="actionServlet?todo=creation&choix=<%=id%>">Créer ma Tige</a></button>
 							<button class="like btn btn-default" type="button"><span class="fa fa-heart"></span></button>

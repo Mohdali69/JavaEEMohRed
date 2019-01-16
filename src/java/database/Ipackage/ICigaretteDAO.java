@@ -20,5 +20,9 @@ public interface ICigaretteDAO {
     
     public void setDataSource(javax.sql.DataSource ds);
     
-    public List<Cigarette> getCigarette();    
+    public List<Cigarette> getCigarette();
+    
+    public void supprimerCigarette(Cigarette Cigarette);
+    
+    public void creerCigarette(Cigarette Cigarette);
 }

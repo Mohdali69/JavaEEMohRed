@@ -19,5 +19,9 @@ public interface IIngredientsDAO {
     
     public void setDataSource(javax.sql.DataSource ds);
     
-    public List<Ingredients> getIngredients();   
+    public List<Ingredients> getIngredients(); 
+    
+    public void supprimerIngredients(Ingredients Ingredients);
+    
+    public void creerIngredients(Ingredients Ingredients);
 }

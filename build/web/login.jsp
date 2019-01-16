@@ -19,6 +19,9 @@
         <link href="./assets/style.css" rel="stylesheet">
         <link href="./assets/home.css" rel="stylesheet">
         <link href="./assets/menu.css" rel="stylesheet">
+        <link href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+        <script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+        <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
         <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
         <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
         <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -82,6 +85,27 @@
 							<span class="color green"></span>
 							<span class="color blue"></span>
 						</h5>
+                                                
+<!------ Include the above in your HEAD tag ---------->
+
+                                               <ul class="nav navbar-nav">
+                                                <li class="dropdown">
+                                                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Iasmani Pinazo <span class="glyphicon glyphicon-user pull-right"></span></a>
+                                                  <ul class="dropdown-menu">
+                                                      <%    
+                                                    <li><a href="#">Account Settings <span class="glyphicon glyphicon-cog pull-right"></span></a></li>
+                                                    <li class="divider"></li>
+                                                    <li><a href="#">User stats <span class="glyphicon glyphicon-stats pull-right"></span></a></li>
+                                                    <li class="divider"></li>
+                                                    <li><a href="#">Messages <span class="badge pull-right"> 42 </span></a></li>
+                                                    <li class="divider"></li>
+                                                    <li><a href="#">Favourites Snippets <span class="glyphicon glyphicon-heart pull-right"></span></a></li>
+                                                    <li class="divider"></li>
+                                                    <li><a href="#">Sign Out <span class="glyphicon glyphicon-log-out pull-right"></span></a></li>
+                                                    %>        
+                                                  </ul>
+                                                </li>
+                                              </ul>
 						<div class="action">
 							<button class="add-to-cart btn btn-dark" type="button">Ajouter au panier</button>
 							<button class="like btn btn-default" type="button"><span class="fa fa-heart"></span></button>

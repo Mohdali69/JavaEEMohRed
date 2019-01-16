@@ -7,6 +7,7 @@ package database.Ipackage;
 
 import java.sql.Connection;
 import java.util.List;
+import metier.Cigarette;
 import metier.Utilisateur;
 
 /**
@@ -19,5 +20,5 @@ public interface ICigaretteDAO {
     
     public void setDataSource(javax.sql.DataSource ds);
     
-    public List<Utilisateur> getUsers();    
+    public List<Cigarette> getCigarette();    
 }

@@ -21,6 +21,22 @@ body#LoginForm{ background-image:url("./images/background.png"); background-repe
   height: 50px;
   line-height: 50px;
 }
+#principal{
+    width : 50%;
+    height : auto;
+    display :inline-block;
+    margin-left:30%;
+}
+.pubG{
+    position:absolute;
+    margin-top:4%;
+   
+}
+.pubD{
+  
+    float : right;
+    margin-top:4%;
+}
 .main-div {
   background: #ffffff none repeat scroll 0 0;
   border-radius: 2px;

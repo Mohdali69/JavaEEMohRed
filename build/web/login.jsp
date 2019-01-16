@@ -62,7 +62,7 @@
 						
 					</div>
 					<div class="details col-md-6" >
-						<h3 class="product-title">Choisissez vos ingrédients ! </h3>
+						<h3 class="product-title">Choisissez votre visuel ! </h3>
 						<div class="rating">
 							<div class="stars">
 								<span class="fa fa-star checked"></span>
@@ -88,7 +88,7 @@
 							<span class="color blue"></span>
 						</h5>
 						<div class="action">
-                                                    <button class="add-to-cart btn btn-dark" type="button"><a href="actionServlet?todo=creation&choix=<%=id%>">Ajouter au panier</a></button>
+                                                    <button class="add-to-cart btn btn-dark" type="button"><a href="actionServlet?todo=creation&choix=<%=id%>">Créer ma Tige</a></button>
 							<button class="like btn btn-default" type="button"><span class="fa fa-heart"></span></button>
 						</div>
 					</div>

@@ -67,6 +67,7 @@ public class ActionServlet extends HttpServlet {
                 action = new creationAction();
                 vue = action.execute(request);
                 break;
+                
             case "classique" : 
                 
                 action = new classiqueAction();

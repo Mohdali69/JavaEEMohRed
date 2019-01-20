@@ -44,15 +44,15 @@
    <img src="./assets/images/pub2.gif" class="pubD"/>
    <div class="container">
 
-       <% if(session.getAttribute("erreur")!=""){
 
        <% if(!session.getAttribute("erreur").equals("") || session.getAttribute("erreur")!=null){
            out.println("<div class='alert alert-danger' role='alert'>"+session.getAttribute("erreur")+"</div>");
            }
        else{
+
            out.println("<div class='alert alert-success' role='alert'> Bien Ouej, il reste plus qu'à consommer ! Ouee Marouanneeuxx!!!</div>");
-       }
-           
+           }
+          
            %>
        
    </div>

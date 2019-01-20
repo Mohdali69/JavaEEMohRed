@@ -49,10 +49,10 @@ public class ajoutAction extends Action{
             List<Cigarette> Lcig = cig.getCigarette();
             LIngre=ingre.getIngredients();
             request.getSession().setAttribute("Liste",LIngre);
-            request.setAttribute("erreur", "");
+            
            
             if(request.getParameter("nom").equals("")){
-                request.setAttribute("erreur", "Le champ nom doit etre rempli ! FDP");
+                request.getSession().setAttribute("erreur", "Le champ nom doit etre rempli ! FDP");
                 return("ajout.jsp");
             }
             String nom = request.getParameter("nom");

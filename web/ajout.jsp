@@ -45,7 +45,7 @@
    <div class="container">
 
 
-       <% if(!session.getAttribute("erreur").equals("") || session.getAttribute("erreur")!=null){
+       <% if(session.getAttribute("erreur")!=null){
            out.println("<div class='alert alert-danger' role='alert'>"+session.getAttribute("erreur")+"</div>");
            }
        else{

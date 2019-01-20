@@ -43,7 +43,7 @@
    <img src="./assets/images/pubKhapta.gif" class="pubG"/>
    <img src="./assets/images/pub2.gif" class="pubD"/>
    <div class="container">
-    <%! List<Ingredients> Lingre = new ArrayList();
+    <%! List<Ingredients> Lingre = new ArrayList(); // initialisation en global de la liste d'ingrédients
     %>
        <form method="POST" action="actionServlet?todo=ajout">
   <div class="form-group">
@@ -55,7 +55,7 @@
     <select  class="form-control" id="exampleFormControlSelect2" name="ingredient1">
                <option value="150">Rien</option>
         <%  
-          Lingre = (ArrayList) session.getAttribute("Liste");
+          Lingre = (ArrayList) session.getAttribute("Liste"); // remplissage du dropdown en fonction de la liste 
            for(int j=0;j<Lingre.size();j++){
              out.println("<option value="+Lingre.get(j).getId()+">"+Lingre.get(j).getNom()+"</option>");
             }
@@ -69,7 +69,7 @@
     <select class="form-control" id="exampleFormControlSelect2" name="ingredient2">
                <option value="150">Rien</option>
         <%  
-          Lingre = (ArrayList) session.getAttribute("Liste");
+          Lingre = (ArrayList) session.getAttribute("Liste"); // remplissage du dropdown en fonction de la liste 
            for(int j=0;j<Lingre.size();j++){
              out.println("<option value="+Lingre.get(j).getId()+">"+Lingre.get(j).getNom()+"</option>");
             }
@@ -82,7 +82,7 @@
     <select class="form-control" id="exampleFormControlSelect2" name="ingredient3">
                <option value="150">Rien</option>
         <%  
-          Lingre = (ArrayList) session.getAttribute("Liste");
+          Lingre = (ArrayList) session.getAttribute("Liste"); // remplissage du dropdown en fonction de la liste 
            for(int j=0;j<Lingre.size();j++){
              out.println("<option value="+Lingre.get(j).getId()+">"+Lingre.get(j).getNom()+"</option>");
             }
@@ -95,7 +95,7 @@
     <select class="form-control" id="exampleFormControlSelect2" name="ingredient4">
                <option value="150">Rien</option>
         <%  
-          Lingre = (ArrayList) session.getAttribute("Liste");
+          Lingre = (ArrayList) session.getAttribute("Liste"); // remplissage du dropdown en fonction de la liste 
            for(int j=0;j<Lingre.size();j++){
              out.println("<option value="+Lingre.get(j).getId()+">"+Lingre.get(j).getNom()+"</option>");
             }
@@ -108,7 +108,7 @@
     <select class="form-control" id="exampleFormControlSelect2" name="ingredient5">
                <option value="150">Rien</option>
         <%  
-          Lingre = (ArrayList) session.getAttribute("Liste");
+          Lingre = (ArrayList) session.getAttribute("Liste"); // remplissage du dropdown en fonction de la liste 
            for(int j=0;j<Lingre.size();j++){
              out.println("<option value="+Lingre.get(j).getId()+">"+Lingre.get(j).getNom()+"</option>");
             }
@@ -121,7 +121,7 @@
     <select class="form-control" id="exampleFormControlSelect2" name="ingredient6">
                <option value="150">Rien</option>
         <%  
-          Lingre = (ArrayList) session.getAttribute("Liste");
+          Lingre = (ArrayList) session.getAttribute("Liste"); // remplissage du dropdown en fonction de la liste 
            for(int j=0;j<Lingre.size();j++){
              out.println("<option value="+Lingre.get(j).getId()+">"+Lingre.get(j).getNom()+"</option>");
             }
@@ -133,7 +133,7 @@
     <label for="exampleFormControlTextarea1">Commentaire</label>
     <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="commentaire"></textarea>
   </div>
-    <input type="submit" class="btn btn-dark" name="valider">Valider</button>
+    <input type="submit" class="btn btn-dark" name="valider">
 </form>
             
        

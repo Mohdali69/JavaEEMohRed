@@ -25,7 +25,7 @@ public class OracleDataSourceDAO extends MysqlDataSource {
     private OracleDataSourceDAO () throws SQLException  {
     }
     
-    public static OracleDataSourceDAO getOracleDataSourceDAO() throws FileNotFoundException{
+    public static OracleDataSourceDAO getOracleDataSourceDAO() throws FileNotFoundException{ //initialisation de la connexion avec la BDD mySQL
        FileInputStream fichier = null; 
        
         try{

@@ -41,7 +41,7 @@ public class OracleUtilisateurDAO implements IUtilisateurDAO{
    
     
     @Override 
-    public List<Utilisateur> getUsers() {
+    public List<Utilisateur> getUsers() { //fonction qui retourne tous les utlisateurs de la BDD
         ResultSet rset = null; 
         Statement stmt = null;
         List<Utilisateur> listeUser = null; 

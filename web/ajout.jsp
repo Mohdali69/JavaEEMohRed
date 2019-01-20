@@ -45,12 +45,12 @@
    <div class="container">
 
 
-       <% if(session.getAttribute("erreur")!=null){
+       <% if(session.getAttribute("erreur")!=null){ //teste si on a initialiser la variable d'erreur
            out.println("<div class='alert alert-danger' role='alert'>"+session.getAttribute("erreur")+"</div>");
            }
        else{
 
-           out.println("<div class='alert alert-success' role='alert'> Bien Ouej, il reste plus qu'à consommer ! Ouee Marouanneeuxx!!!</div>");
+           out.println("<div class='alert alert-success' role='alert'> Bien Ouej, il reste plus qu'à consommer !</div>");
            }
           
            %>

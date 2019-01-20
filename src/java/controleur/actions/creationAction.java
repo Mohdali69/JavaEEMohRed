@@ -39,8 +39,8 @@ public class creationAction extends Action{
             ingre.setDataSource(ods);//Initialisation du Data Source
             ingre.setConnection(ods.getConnection());//
             
-            LIngre=ingre.getIngredients();
-            request.getSession().setAttribute("Liste",LIngre);
+            LIngre=ingre.getIngredients(); //recuperation de la liste des ingredients de la base de donnée
+            request.getSession().setAttribute("Liste",LIngre);// pour effectuer l'affichage dans les  6 dropdowns
             
             
             

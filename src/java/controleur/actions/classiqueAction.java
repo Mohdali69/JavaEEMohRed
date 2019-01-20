@@ -30,17 +30,17 @@ public class classiqueAction extends Action{
     @Override
     public String execute(HttpServletRequest request) {
         try {
-            OracleDataSourceDAO ods = OracleDataSourceDAO.getOracleDataSourceDAO();
+            OracleDataSourceDAO ods = OracleDataSourceDAO.getOracleDataSourceDAO(); // Initialisation de la connexion 
             OracleCigaretteDAO OCD = new OracleCigaretteDAO();
             OCD.setDataSource(ods);
             OCD.setConnection(ods.getConnection());
             OracleIngredientsDAO OAD = new OracleIngredientsDAO();
             OAD.setConnection(ods.getConnection());
             
-            List<Cigarette> Lcig = OCD.getCigarette();
-            request.getSession().setAttribute("listeCig", Lcig);
+            List<Cigarette> Lcig = OCD.getCigarette(); // recuperation de toutes le cigarettes de la base de donnée 
+            request.getSession().setAttribute("listeCig", Lcig); // passage de parametre pour affihcage
             
-            List<Ingredients> Ling = OAD.getIngredients();
+            List<Ingredients> Ling = OAD.getIngredients(); // idem avec les ingrédients, pour les afficher en fct de leurs identifiant
             request.getSession().setAttribute("listeIng", Ling);
             
             

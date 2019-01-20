@@ -42,7 +42,7 @@ public class OracleIngredientsDAO implements IIngredientsDAO {
    
     
     @Override 
-    public List<Ingredients> getIngredients() {
+    public List<Ingredients> getIngredients() { //fonction  qui retourne tous les ingrédients de la BDD
         ResultSet rset = null; 
         Statement stmt = null;
         List<Ingredients> listeUser = null; 
@@ -65,7 +65,7 @@ public class OracleIngredientsDAO implements IIngredientsDAO {
         
     }
     @Override
-    public void supprimerIngredients(Ingredients Ingredients){
+    public void supprimerIngredients(Ingredients Ingredients){ //fonction qui supprime un ingrédient de la BDD
     PreparedStatement state = null;
         try{
             state=OracleIngredientsDAO.connexionBD.prepareStatement("DELETE FROM Ingredients WHERE id = ?");
@@ -77,7 +77,7 @@ public class OracleIngredientsDAO implements IIngredientsDAO {
         }     
     }
     @Override
-    public void creerIngredients(Ingredients Ingredients){
+    public void creerIngredients(Ingredients Ingredients){ //fonction qui ajoute un ingrédient dans la BDD
          PreparedStatement state = null;
         try{
             state=OracleIngredientsDAO.connexionBD.prepareStatement("INSERT INTO Ingredients (nom,id) VALUES (?,?)");

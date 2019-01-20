@@ -48,10 +48,10 @@
        
        <%
            List<Cigarette> liste =(List<Cigarette>) session.getAttribute("listeCig");
-           System.out.println(liste);
+           
            List<Ingredients> listeIng =(List<Ingredients>) session.getAttribute("listeIng");
            
-          for(Cigarette cig : liste){
+          for(Cigarette cig : liste){ // boucle qui affiche tous les objets Cigarette (le décrément de 1 par rapport aux indice est du au commencement des item dans la BD a 1
               
       out.println("<div class='card'><div class='box'><div class='img'><img src='./assets/images/cig1.jpg'>"+
         "</div><h2>"+cig.getNom()+"<br><span>"+cig.getCommentaire()+"</span></h2><p> "+listeIng.get(cig.getIngredient1()-1).getNom()+", "+listeIng.get(cig.getIngredient2()-1).getNom()+", "+listeIng.get(cig.getIngredient3()-1).getNom()+", "+

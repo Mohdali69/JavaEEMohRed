@@ -27,10 +27,10 @@ public class loginAction extends Action{
     public String execute(HttpServletRequest request) {
         try {
             String user = request.getParameter("inputEmail");
-            String pass = request.getParameter("inputPassword");
+            String pass = request.getParameter("inputPassword"); //recuperation des saisies utilisateur
             
             Utilisateur current = new Utilisateur(user,pass,"",120);
-            request.getSession().setAttribute("currentUser", current);
+            request.getSession().setAttribute("currentUser", current); // creation  de l'objet utlisiateur + passage de parametre
             
             OracleDataSourceDAO ods = OracleDataSourceDAO.getOracleDataSourceDAO();
             OracleUtilisateurDAO OUD = new OracleUtilisateurDAO();
@@ -39,13 +39,13 @@ public class loginAction extends Action{
             
             
             List<Utilisateur> liste = new ArrayList<>();
-            liste = OUD.getUsers();
-            for(Utilisateur us : liste){
+            liste = OUD.getUsers(); //recuperation de tous les users de la BDD
+            for(Utilisateur us : liste){ // boucle qui compare les données saisie avec la BDD
                 if(us.getUser().equals(user)){
                     if(us.getPassword().equals(pass)){
                         
                         request.getSession().setAttribute("log", true);
-                        return ("login.jsp");
+                        return ("login.jsp"); // arrete la fonction si trouve une correspondance
                     }
                 }
             }} catch (SQLException ex) {
@@ -53,7 +53,7 @@ public class loginAction extends Action{
         } catch (FileNotFoundException ex) {
             Logger.getLogger(loginAction.class.getName()).log(Level.SEVERE, null, ex);
         }
-        request.getSession().setAttribute("log", false);
+        request.getSession().setAttribute("log", false); //si rien trouvé, renvoi false et retourne a la page index.html
         return ("index.html");
     }
     

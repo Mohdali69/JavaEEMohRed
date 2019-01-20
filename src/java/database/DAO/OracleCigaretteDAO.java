@@ -38,7 +38,7 @@ public class OracleCigaretteDAO implements ICigaretteDAO {
    
     
     @Override 
-    public List<Cigarette> getCigarette() {
+    public List<Cigarette> getCigarette() { // retourne toutres les cigarette de laBDD
         ResultSet rset = null; 
         Statement stmt = null;
         List<Cigarette> listeUser = null; 
@@ -61,7 +61,7 @@ public class OracleCigaretteDAO implements ICigaretteDAO {
         
     }
     @Override
-    public void supprimerCigarette(Cigarette Cigarette) {
+    public void supprimerCigarette(Cigarette Cigarette) { // supprime une cigarette
          PreparedStatement state = null;
         try{
             state=OracleCigaretteDAO.connexionBD.prepareStatement("DELETE FROM Cigarette WHERE id = ?");
@@ -73,7 +73,7 @@ public class OracleCigaretteDAO implements ICigaretteDAO {
         }
     }
     @Override
-    public void creerCigarette(Cigarette Cigarette) {
+    public void creerCigarette(Cigarette Cigarette) { //ajoute une cigarette 
         PreparedStatement state = null;
         try{
             state=OracleCigaretteDAO.connexionBD.prepareStatement("INSERT INTO Cigarette (nom,id,ingredient1,prix,ingredient2,ingredient3,ingredient4,ingredient5,ingredient6,commentaire) VALUES (?,?,?,?,?,?,?,?,?,?)");

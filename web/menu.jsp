@@ -37,7 +37,7 @@
                         </li>
                         <li class="nav-item"> <a href="#" class="nav-link"><% 
            Utilisateur us =(Utilisateur) session.getAttribute("currentUser");
-           if((Boolean)session.getAttribute("log")==true){
+           if((Boolean)session.getAttribute("log")==true){ // affichage du login de l'utlilisateur connecté 
                out.println("Bienvenue "+us.getUser());
            }
            else{
